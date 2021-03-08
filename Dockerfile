@@ -3,7 +3,7 @@ ENV TZ=America/Chicago
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update && \
     apt dist-upgrade --autoremove -y && \
-	apt-get install -y vim curl git software-properties-common bash zsh
+	apt-get install -y vim curl git software-properties-common bash zsh zip unzip
 RUN add-apt-repository ppa:ondrej/php -y && \
     curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list && \
