@@ -22,5 +22,6 @@ RUN pecl install sqlsrv && \
 	printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/8.0/mods-available/sqlsrv.ini && \
 	printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/8.0/mods-available/pdo_sqlsrv.ini && \
 	phpenmod -v 8.0 sqlsrv pdo_sqlsrv
+COPY openssl.cnf /etc/ssl/openssl.cnf
 
 CMD ["bash"]
