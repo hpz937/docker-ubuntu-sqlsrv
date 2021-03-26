@@ -8,7 +8,7 @@ RUN add-apt-repository ppa:ondrej/php -y && \
     curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list && \
 	apt-get update && \
-	ACCEPT_EULA=Y apt-get install php8.0 php8.0-dev php8.0-xml php8.0-curl php8.0-smbclient msodbcsql17 mssql-tools -y --allow-unauthenticated && \
+	ACCEPT_EULA=Y apt-get install php8.0 php8.0-dev php8.0-xml php8.0-curl php8.0-smbclient php8.0-ssh2 msodbcsql17 mssql-tools -y --allow-unauthenticated && \
 	echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile && \
 	echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc && \
 	apt install unixodbc-dev -y
